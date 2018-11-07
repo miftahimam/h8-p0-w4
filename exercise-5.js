@@ -1,10 +1,24 @@
 function ubahHuruf(kata) {
-    var output="";
-	for(var i = 0; i<kata.length; i++){
-          output+=String.fromCharCode(kata.charCodeAt(i) + 
-          (kata[i] === 'z' || kata[i] === 'Z' ? -25 : 1));
-      }
-      return output;
+    var output=[];
+    var kamus = 'abcdefghijklmnopqrstuvwxyz'
+    
+ for (var i = 0 ; i< kata.length ;i+=1 ){
+     for(var j = 0; j < kamus.length; j++){
+        if(kamus[j] === kata[i]){
+            output = output + kamus[j+1]
+        }
+     
+     }
+   
+  }
+ return output;
+
+ 
+	// for(var i = 0; i<kata.length; i++){
+    //       output+=String.fromCharCode(kata.charCodeAt(i) + 
+    //       (kata[i] === 'z' || kata[i] === 'Z' ? -25 : 1));
+    //   }
+//       return output;
 }
 
 // TEST CASES
