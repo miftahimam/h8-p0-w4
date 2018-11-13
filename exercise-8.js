@@ -1,18 +1,21 @@
 function tukarBesarKecil(kalimat) {
-    ///CARA I :
-    // var kalimatTukar = '';
-    
-    // for (var i = 0; i < kalimat.length; i++) {
-    //   kalimatTukar += kalimat[i] !== kalimat[i].toLowerCase() ? kalimat[i].toLowerCase() : kalimat[i].toUpperCase()
-    // }
-    
-    // return kalimatTukar;
-    
-    // CARA II :
-    return kalimat.split('').reduce(function (str, char) {
-      return str + (char.toLowerCase() === char ? char.toUpperCase() : char.toLowerCase());
-    }, '')
+  // you can only write your code here!upp
+ var tuker = ''
+ for(var i= 0; i < kalimat.length; i++){
   
+    if(kalimat[i] === kalimat[i].toLowerCase()){
+      tuker += kalimat[i].toUpperCase()
+    }else if(kalimat[i] === kalimat[i].toUpperCase()){
+      tuker += kalimat[i].toLowerCase()
+    
+   }
+   
+   else{
+    tuker += kalimat[i]
+  }
+ }
+
+  return tuker
 }
 
 // TEST CASES
